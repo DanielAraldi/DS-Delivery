@@ -22,8 +22,8 @@ public class OrderService {
 
 	@Autowired
 	private OrderRepository repository;
-	
-	@Autowired 
+
+	@Autowired
 	private ProductRepository productRepository;
 
 	// Return a DTO (Data Transfer Objects), that is, it will only deliver the data
@@ -36,14 +36,23 @@ public class OrderService {
 
 	@Transactional
 	public OrderDTO insert(OrderDTO dto) {
-		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(), Instant.now(), OrderStatus.PENDING);
-		
+		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(), Instant.now(),
+				OrderStatus.PENDING);
+
 		// Product association to order
-		for(ProductDTO p : dto.getProducts()) {
+		for (ProductDTO p : dto.getProducts()) {
 			Product product = productRepository.getOne(p.getId());
 			order.getProducts().add(product);
 		}
-		
+
+		order = repository.save(order);
+		return new OrderDTO(order);
+	}
+
+	@Transactional
+	public OrderDTO setDelivered(Long id) {
+		Order order = repository.getOne(id);
+		order.setStatus(OrderStatus.DELIVERED);
 		order = repository.save(order);
 		return new OrderDTO(order);
 	}
