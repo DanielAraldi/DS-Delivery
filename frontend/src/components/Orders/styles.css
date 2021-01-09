@@ -6,53 +6,6 @@
   margin: 0;
 }
 
-.order-location-container {
-  display: flex;
-  justify-content: center;
-}
-
-.order-location-content {
-  width: 70%;
-  margin: 30px 0 120px 0;
-  padding: 20px 0;
-  height: 400px;
-  background: #fff;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}
-
-.filter-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.filter {
-  width: 80%;
-}
-
-.filter > div {
-  border-radius: 10px;
-  min-height: 60px;
-}
-
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  margin-top: 20px;
-  z-index: 0;
-}
-
-.order-location-title {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  letter-spacing: -0.015em;
-  color: var(--secondary-color);
-}
-
 .order-summary-container {
   display: flex;
   justify-content: center;
