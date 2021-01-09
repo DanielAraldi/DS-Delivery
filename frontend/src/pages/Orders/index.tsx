@@ -10,6 +10,7 @@ import StepsHeader from "../../components/StepsHeader";
 import { fetchProducts } from "../../services/api";
 
 import { checkIsSelected } from "../../utils/checkIsSelected";
+import { totalPrice } from "../../utils/totalPrice";
 
 import "./styles.css";
 
@@ -46,7 +47,10 @@ function Orders() {
       <OrderLocation
         onChangeLocation={(location) => setOrderLocation(location)}
       />
-      <OrderSummary />
+      <OrderSummary
+        amount={selectedProducts.length}
+        totalPrice={totalPrice(selectedProducts)}
+      />
     </div>
   );
 }
