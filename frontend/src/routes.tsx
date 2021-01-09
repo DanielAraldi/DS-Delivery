@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Orders from "./pages/Orders";
+
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function Routes() {
   return (
@@ -16,6 +18,7 @@ function Routes() {
           <Orders />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
