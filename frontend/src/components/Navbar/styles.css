@@ -14,3 +14,10 @@
   color: #ffffff;
   margin-left: 15px;
 }
+
+@media (max-width: 455px) {
+  .main-navbar {
+    justify-content: center;
+    padding-left: 0px;
+  }
+}

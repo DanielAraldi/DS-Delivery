@@ -1,0 +1,128 @@
+.home-container {
+  padding-top: 100px;
+  height: calc(100vh - 254px);
+}
+
+.home-container h1 {
+  margin: 0;
+}
+
+.home-content {
+  display: flex;
+  justify-content: center;
+}
+
+.home-title {
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 58px;
+  letter-spacing: -0.015em;
+  color: var(--dark-color);
+  margin-bottom: 40px !important;
+}
+
+.home-subtitle {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: -0.015em;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.home-btn-order {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  height: 70px;
+  width: 235px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+.home-btn-order:hover {
+  background-color: var(--primary-hover-color);
+  transform: scale(1.01);
+}
+
+.home-image svg {
+  width: 100% !important;
+}
+
+@media (max-width: 1366px) {
+  .home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-content {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-title {
+    font-size: 30px;
+    line-height: 43px;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home-container {
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .home-content {
+    flex-direction: column-reverse;
+  }
+
+  .home-title {
+    font-size: 45px;
+    line-height: 48px;
+  }
+
+  .home-subtitle {
+    text-align: center;
+  }
+
+  .home-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-image {
+    text-align: center;
+  }
+
+  .home-image svg {
+    width: 80% !important;
+  }
+}
+
+@media (max-height: 700px) {
+  .home-container {
+    padding-top: 0px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .home-title {
+    font-size: 30px;
+    line-height: 43px;
+    margin-bottom: 20px !important;
+  }
+
+  .home-subtitle {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
