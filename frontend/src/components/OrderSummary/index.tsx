@@ -14,9 +14,7 @@ function OrderSummary() {
             VALOR TOTAL
           </span>
         </div>
-        <button className="order-summary-make-order">
-          FAZER PEDIDO
-        </button>
+        <button className="order-summary-make-order">FAZER PEDIDO</button>
       </div>
     </div>
   );

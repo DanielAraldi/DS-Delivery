@@ -86,7 +86,11 @@ function OrderLocation({ onChangeLocation }: Props) {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={address.position}>
-            <Popup>{address.label}</Popup>
+            <Popup>
+              {address.label === undefined
+                ? "O marcador mostrará o seu lugar no mapa"
+                : address.label}
+            </Popup>
           </Marker>
         </MapContainer>
       </div>

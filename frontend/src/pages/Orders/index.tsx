@@ -28,9 +28,7 @@ function Orders() {
     const isAlreadySelected = checkIsSelected(selectedProducts, product);
 
     if (isAlreadySelected) {
-      const selected = selectedProducts.filter(
-        ({id}) => id !== product.id
-      );
+      const selected = selectedProducts.filter(({ id }) => id !== product.id);
       return setSelectedProducts(selected);
     }
 
