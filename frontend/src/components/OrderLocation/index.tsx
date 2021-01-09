@@ -4,7 +4,7 @@ import AsyncSelect from "react-select/async";
 
 import { fetchLocalMapBox } from "../../services/api";
 
-import { OrderLocationData } from "../Orders/types";
+import { OrderLocationData } from "../../pages/Orders/types";
 
 import "./styles.css";
 

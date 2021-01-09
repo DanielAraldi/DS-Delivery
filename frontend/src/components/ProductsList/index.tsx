@@ -1,6 +1,6 @@
 import ProductCard from "../ProductCard";
 
-import { Product } from "./../Orders/types";
+import { Product } from "./../../pages/Orders/types";
 
 import "./styles.css";
 

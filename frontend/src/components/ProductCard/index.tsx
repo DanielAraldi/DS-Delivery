@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import { Product } from "../Orders/types";
+import { Product } from "../../pages/Orders/types";
 
 import { formatPrice } from "./../../utils/formatPrice";
 
