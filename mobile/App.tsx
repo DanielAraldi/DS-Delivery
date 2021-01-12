@@ -9,6 +9,8 @@ import {
 } from "@expo-google-fonts/open-sans";
 import AppLoading from "expo-app-loading";
 
+import Home from "./src/pages/Home";
+
 import Header from "./src/components/Header";
 
 export default function App() {
@@ -23,8 +25,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Header />
       <StatusBar style="light" />
+      <Header />
+      <Home />
     </View>
   );
 }
