@@ -1,12 +1,26 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
+{
+  /* Allows elements to be playable */
+}
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
+
 export default function Header() {
+  const navigation = useNavigation();
+
+  const handleOnPress = () => {
+    navigation.navigate("Home");
+  };
+
   return (
-    <View style={styles.container}>
-      <Image source={require("../../assets/logo.png")} />
-      <Text style={styles.text}>DS Delivery</Text>
-    </View>
+    <TouchableWithoutFeedback onPress={handleOnPress}>
+      <View style={styles.container}>
+        <Image source={require("../../assets/logo.png")} />
+        <Text style={styles.text}>DS Delivery</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
