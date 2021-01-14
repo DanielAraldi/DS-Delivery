@@ -6,7 +6,7 @@ export type Order = {
   moment: string,
   status: string,
   total: number,
-  products: Product[]
+  products: Product[],
 }
 
 export type Product = {
@@ -14,5 +14,5 @@ export type Product = {
   name: string,
   price: number,
   description: string,
-  imageUri: string
+  imageUri: string,
 }

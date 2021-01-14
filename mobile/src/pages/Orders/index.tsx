@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, ScrollView, Text, Alert } from "react-native";
+import { StyleSheet, ScrollView, Text, Alert, Image, View } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 import Header from "../../components/Header";
@@ -26,13 +26,19 @@ export default function Orders() {
       <Header />
       <ScrollView style={styles.container}>
         {isLoading ? (
-          <Text>Buscando pedidos..</Text>
+          <View style={styles.content}>
+            <Image
+              style={styles.loadingImage}
+              source={require("../../assets/loading.gif")}
+            />
+            <Text style={styles.loadingText}>Buscando pedidos..</Text>
+          </View>
         ) : (
-          orders.map((order) => {
+          orders.map((order) => (
             <TouchableWithoutFeedback key={order.id}>
               <OrderCard order={order} />
-            </TouchableWithoutFeedback>;
-          })
+            </TouchableWithoutFeedback>
+          ))
         )}
       </ScrollView>
     </>
@@ -43,5 +49,25 @@ const styles = StyleSheet.create({
   container: {
     paddingRight: "5%",
     paddingLeft: "5%",
+  },
+
+  content: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  loadingImage: {
+    marginTop: "25%",
+    alignItems: "center",
+  },
+
+  loadingText: {
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 18,
+    lineHeight: 25,
+    letterSpacing: -0.24,
+    color: "#263238",
+    fontFamily: "OpenSans_700Bold",
   },
 });

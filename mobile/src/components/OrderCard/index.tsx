@@ -19,11 +19,11 @@ export default function OrderCard({ order }: Props) {
       </View>
       <Text style={styles.text}>{dataFromNow(order.moment)}</Text>
       <View style={styles.productsList}>
-        {order.products.map(({ id, name }) => {
+        {order.products.map(({ id, name }) => (
           <Text key={id} style={styles.text}>
             {name}
-          </Text>;
-        })}
+          </Text>
+        ))}
       </View>
     </View>
   );
