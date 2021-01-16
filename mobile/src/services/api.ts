@@ -1,5 +1,8 @@
 import axios from "axios";
 
-const API_URL = 'http://192.168.0.109:8080' /* Your URL API here! */
+const API_URL = ""; /* Your URL API here! */
 
 export const fetchOrders = () => axios(`${API_URL}/orders`);
+
+export const confirmDelivey = (orderId: number) =>
+  axios.put(`${API_URL}/orders/${orderId}/delivered`);

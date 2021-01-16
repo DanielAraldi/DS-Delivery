@@ -17,7 +17,7 @@ export default function OrderCard({ order }: Props) {
         <Text style={styles.orderName}>Pedido {order.id}</Text>
         <Text style={styles.orderPrice}>{formatPrice(order.total)}</Text>
       </View>
-      <Text style={styles.text}>{dataFromNow(order.moment)}</Text>
+      <Text style={styles.textTime}>{dataFromNow(order.moment)}</Text>
       <View style={styles.productsList}>
         {order.products.map(({ id, name }) => (
           <Text key={id} style={styles.text}>
@@ -48,12 +48,21 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  textTime: {
+    fontWeight: "normal",
+    fontSize: 14,
+    lineHeight: 19,
+    letterSpacing: -0.24,
+    color: "#9E9E9E",
+    fontFamily: "OpenSans_400Regular",
+  },
   text: {
     fontWeight: "normal",
     fontSize: 14,
     lineHeight: 19,
     letterSpacing: -0.24,
     color: "#9E9E9E",
+    textAlign: "center",
     fontFamily: "OpenSans_400Regular",
   },
   orderName: {

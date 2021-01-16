@@ -9,17 +9,36 @@ import { fetchOrders } from "../../services/api";
 
 import { Order } from "../../@types/types";
 
+import { useIsFocused, useNavigation } from "@react-navigation/native";
+
 export default function Orders() {
+  const navigation = useNavigation();
   const [orders, setOrders] = useState<Order[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const isFocused = useIsFocused(); /* Checks whether the component is being rendered */
 
-  useEffect(() => {
+  const fetchData = () => {
     setIsLoading(true);
     fetchOrders()
       .then((response) => setOrders(response.data))
-      .catch(() => Alert.alert("Houve um erro ao buscar os pedidos!"))
+      .catch((error) => {
+        console.log(error);
+        Alert.alert("Houve um erro ao buscar os pedidos!");
+      })
       .finally(() => setIsLoading(false));
-  }, []);
+  };
+
+  useEffect(() => {
+    if (isFocused) {
+      fetchData();
+    }
+  }, [isFocused]);
+
+  const handleOnPress = (order: Order) => {
+    navigation.navigate("OrderDetails", {
+      order /* The request as a route parameter */,
+    });
+  };
 
   return (
     <>
@@ -35,7 +54,10 @@ export default function Orders() {
           </View>
         ) : (
           orders.map((order) => (
-            <TouchableWithoutFeedback key={order.id}>
+            <TouchableWithoutFeedback
+              key={order.id}
+              onPress={() => handleOnPress(order)}
+            >
               <OrderCard order={order} />
             </TouchableWithoutFeedback>
           ))
