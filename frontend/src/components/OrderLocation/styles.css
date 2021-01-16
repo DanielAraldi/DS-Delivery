@@ -59,6 +59,7 @@
   .order-location-title {
     font-size: 16px;
     line-height: 20px;
+    padding: 0 10px;
   }
 
   .filter {

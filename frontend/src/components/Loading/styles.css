@@ -1,0 +1,46 @@
+.loading-container {
+  width: 70%;
+  background: #da5c5c;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.loading-text {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.015em;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0 0;
+}
+
+@keyframes ride {
+  from {
+    right: 60px;
+  }
+
+  to {
+    right: -50px;
+  }
+}
+
+.loading-image {
+  position: relative;
+  animation: ride 1s ease 0s infinite;
+}
+
+@media only screen and (max-width: 1366px) {
+  .loading-container {
+    width: 60%;
+  }
+
+  .loading-text {
+    font-size: 16px;
+  }
+}

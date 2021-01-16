@@ -5,3 +5,7 @@
 .orders-container h3 {
   margin: 0;
 }
+.orders-loading {
+  display: flex;
+  justify-content: center;
+}
