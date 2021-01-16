@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 
 import { OrderLocationData, Product } from "./types";
 
+import Loading from "../../components/Loading";
 import OrderLocation from "../../components/OrderLocation";
 import OrderSummary from "../../components/OrderSummary";
 import ProductsList from "../../components/ProductsList";
@@ -19,14 +20,17 @@ function Orders() {
   const [products, setProducts] = useState<Product[]>([]); /* A Products List */
   const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
   const [orderLocation, setOrderLocation] = useState<OrderLocationData>();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     fetchProducts()
       .then((response) => setProducts(response.data))
       .catch((error) => {
         console.log(error);
         toast.warning("Erro ao listar produtos!");
-      });
+      })
+      .finally(() => setIsLoading(false));
   }, []);
 
   const handleSelectProduct = (product: Product) => {
@@ -61,11 +65,17 @@ function Orders() {
   return (
     <div className="orders-container">
       <StepsHeader />
-      <ProductsList
-        products={products}
-        onSelectProduct={handleSelectProduct}
-        seletedProducts={selectedProducts}
-      />
+      {isLoading ? (
+        <div className="orders-loading">
+          <Loading />
+        </div>
+      ) : (
+        <ProductsList
+          products={products}
+          onSelectProduct={handleSelectProduct}
+          seletedProducts={selectedProducts}
+        />
+      )}
       <OrderLocation
         onChangeLocation={(location) => setOrderLocation(location)}
       />
