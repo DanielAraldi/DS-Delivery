@@ -51,6 +51,12 @@ function Orders() {
       products: productsIds,
     };
 
+    if (payload.address === undefined || payload.products.length === 0) {
+      return toast.warning(
+        "Você ainda não concluiu o seu pedido, por favor siga as etapas mostradas no início da página!"
+      );
+    }
+
     saveOrder(payload)
       .then((response) => {
         toast.error(`Pedido enviado com sucesso! Nº ${response.data.id}`);
