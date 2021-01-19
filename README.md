@@ -1,6 +1,6 @@
 <h1 align="center">
     <img alt="DS Delivery" src=".github/dsdelivery.JPG" height="100px" />
-    <br>Next Level Week #3<br/>
+    <br>Semana DevSuperior 2.0<br/>
     Spring Boot | ReactJS | React Native
 </h1>
 
@@ -55,7 +55,7 @@ Essa aplicação foi realizada durante a **Semana DevSuperior 2.0**, projeto da 
 
   - É **necessário** possuir o **[Java 11](https://www.java.com/)** e **[Spring Boot](https://spring.io/)** instalados no computador.
   - É **necessário** possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador.
-  - É **vital** ter a IDE **[Eclipse](https://spring.io/tools)** instalado no computador para subir o backend.
+  - É **vital** ter a **[IDE Eclipse](https://spring.io/tools)** instalado no computador para subir o backend.
   - Também, é **preciso** ter um gerenciador de pacotes seja o **[Yarn](https://yarnpkg.com/)** ou **[NPM](https://www.npmjs.com/)**.
   - Por fim, é **essencial** ter o **[Expo](https://expo.io/)** instalado de forma global na máquina.
 
