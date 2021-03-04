@@ -9,9 +9,6 @@
     <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/DanielAraldi/DS-Delivery?style=flat-square">
     <img alt="GitHub" src="https://img.shields.io/github/license/DanielAraldi/DS-Delivery?style=flat-square">
     <img alt="Made by DevSuperior" src="https://img.shields.io/badge/made%20by-DevSuperior-%237519C1?style=flat-square"><br/>
-    <a href="https://insomnia.rest/run/?label=&uri=" target="_blank">
-        <img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia">
-    </a><br/>
 </p>
 
 <p align="center">
@@ -78,14 +75,14 @@ Essa aplicação foi realizada durante a **Semana DevSuperior 2.0**, projeto da 
   # APLICAÇÃO WEB
   $ cd frontend
   # Instalando as dependências do projeto.
-  $ npm install # ou yarn add
+  $ npm install # ou yarn install
   # Inicie a aplicação web
   $ npm start # ou yarn start
 
   # APLICAÇÃO MOBILE
   $ cd mobile
   # Instalando as dependências do projeto.
-  $ npm install # ou yarn add
+  $ npm install # ou yarn install
   # Inicie a aplicação mobile
   $ npm start # ou yarn start
 ```
@@ -95,5 +92,4 @@ Essa aplicação foi realizada durante a **Semana DevSuperior 2.0**, projeto da 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-
 <sup>Projeto desenvolvido com a tutoria de [Nelio Alves](https://github.com/acenelio) e [Washington Soares](https://github.com/washingtonsoares), da [DevSuperior](https://devsuperior.com.br/).</sup>
