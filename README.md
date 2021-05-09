@@ -36,7 +36,6 @@ Essa aplicação foi realizada durante a **Semana DevSuperior 2.0**, projeto da 
 - [Leaflet](https://leafletjs.com/)
 - [NPM](https://www.npmjs.com/)
 - [Mapbox](https://www.mapbox.com/)
-- [PgAdmin](https://www.pgadmin.org/)
 - [Postgresql](https://www.postgresql.org/)
 - [ReactJS](https://reactjs.org/)
 - [React Native](http://facebook.github.io/react-native/)
@@ -44,7 +43,7 @@ Essa aplicação foi realizada durante a **Semana DevSuperior 2.0**, projeto da 
 - [React Select](https://react-select.com/)
 - [React Toastify](https://fkhadra.github.io/react-toastify/)
 - [Spring Boot](https://spring.io/)
-- [Typescript](https://www.typescriptlang.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## :boom: Como Executar
 
@@ -77,14 +76,14 @@ Essa aplicação foi realizada durante a **Semana DevSuperior 2.0**, projeto da 
   # Instalando as dependências do projeto.
   $ npm install # ou yarn install
   # Inicie a aplicação web
-  $ npm start # ou yarn start
+  $ npm run start # ou yarn start
 
   # APLICAÇÃO MOBILE
   $ cd mobile
   # Instalando as dependências do projeto.
   $ npm install # ou yarn install
   # Inicie a aplicação mobile
-  $ npm start # ou yarn start
+  $ npm run start # ou yarn start
 ```
 
 ## :memo: Licença
@@ -92,4 +91,5 @@ Essa aplicação foi realizada durante a **Semana DevSuperior 2.0**, projeto da 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
+
 <sup>Projeto desenvolvido com a tutoria de [Nelio Alves](https://github.com/acenelio) e [Washington Soares](https://github.com/washingtonsoares), da [DevSuperior](https://devsuperior.com.br/).</sup>
