@@ -10,7 +10,7 @@
   "dependencies": {
     "@expo-google-fonts/open-sans": "^0.1.0",
     "@react-native-community/masked-view": "0.1.10",
-    "@react-navigation/native": "^5.8.10",
+    "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.12.8",
     "axios": "^0.21.1",
     "dayjs": "^1.10.3",
